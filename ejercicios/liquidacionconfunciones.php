@@ -1,4 +1,8 @@
 <?php
+$salario = $_GET ['salario'] ?? '';
+$errorSalario = $_GET ['errorSalario'] ?? '';
+$salud = $_GET ['salud'] ?? '';
+var_dump($salud);
 ?>
 
 <!DOCTYPE html>

@@ -25,6 +25,9 @@ if(isset($_REQUEST['salario']) && !$_REQUEST['salario']){
 if(isset($_REQUEST['salario']) && !$_REQUEST['salario'] && !$salario){
     $errorSalario = 'Debe ingresar un numero mayor a 0';
 }
-var_dump($salud);
-//header("Location: http://localhost/clases_php/ejercicios/liquidacion.php");
+$apathOrigin = explode ('?',$_SERVER['HTTP_REFERER']);
+$pathOrigin = $apathOrigin [0];
+var_dump($pathOrigin);
+
+header("Location: $pathOrigin?salud=$salud");
 ?>

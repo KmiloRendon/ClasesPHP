@@ -1,9 +1,9 @@
 <?php
-function concatenar ($txt1, $txt2){
+/* function concatenar ($txt1, $txt2){
     return $txt1 . ' ' . $txt2;
 
 }
-echo concatenar('Hola','Mundo');
+echo concatenar('Hola','Mundo'); */
 
 function suma ($num1, $num2){
     return $num1 + $num2;
