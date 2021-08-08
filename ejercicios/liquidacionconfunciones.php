@@ -1,27 +1,4 @@
 <?php
-require_once ('../funciones.php');
-$salario = $_GET['salario'] ?? '';
-$cedula = $_GET['cedula'] ?? '';
-$salud = $pension = $arl = $fps = 0;
-/* $porcentajeSalud = 0.04;
-$porcentajePension = 0.04;
-$porcentajeArl = 0.005;
-$porcentajeFp = 0.01;
-$smlv = 1014980; */
-$errorSalario = '';
-
-
-if ($salario && $cedula) {
-    $salud = deducible($salario, 'salud');
-    $pension = deducible($salario, 'pension');
-    $arl = deducible($salario, 'arl');
-    $fps = deducible($salario, 'fps');
-}
-
-if(isset($_GET['salario']) && !$_GET['salario']){
-    $errorSalario = 'Debe ingresar un salario';
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +10,7 @@ if(isset($_GET['salario']) && !$_GET['salario']){
     <title>Liquidacion</title>
 </head>
 <body>
-    <form action="">
+    <form action="liquidacionActions.php" method="POST">
         <label for="">Salario</label>
         <input type="number" name="salario">
         <label style="color: red"><?php echo $errorSalario ?></label>
@@ -51,6 +28,10 @@ if(isset($_GET['salario']) && !$_GET['salario']){
         <br>
     </form>
     <br>
+  <?php
+
+  if ($salario && $cedula){
+      ?>
   
     <table border="1">
         
@@ -74,6 +55,9 @@ if(isset($_GET['salario']) && !$_GET['salario']){
         </tr>
         
     </table>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
