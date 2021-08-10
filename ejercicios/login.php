@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION) {
-  header("Location: http://localhost/clases_php_adsi_2104630/ejercicios/inicio.php");
+  header("Location: http://localhost/clases_php/ejercicios/inicio.php");
 }
 
 $msg = $_REQUEST['msg'] ?? '';
@@ -15,7 +15,7 @@ $msg = $_REQUEST['msg'] ?? '';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Signin Template for Bootstrap</title>
+    <title>Login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
