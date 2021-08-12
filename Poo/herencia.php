@@ -8,6 +8,4 @@ var_dump($employee->getUserId());
 var_dump($employee->getPassword());
 
 
-var_dump($employee->getFullName())
-
-?>
+var_dump($employee->getFullName());
